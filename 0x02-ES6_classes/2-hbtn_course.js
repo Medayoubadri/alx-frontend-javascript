@@ -1,5 +1,20 @@
 /* eslint-disable */
 export default class ALXCourse {
+    validateType(value, type, errorMsg) {
+      if (typeof value !== type) {
+        throw new TypeError(errorMsg);
+      }
+    }
+  
+    validateStudents(students) {
+      if (
+        !Array.isArray(students) ||
+        !students.every((student) => typeof student === 'string')
+      ) {
+        throw new TypeError('students must be an array of strings');
+      }
+    }
+
   constructor(name, length, students) {
     this.validateType(name, 'string', 'name must be a string');
     this.validateType(length, 'number', 'length must be a number');
@@ -9,20 +24,6 @@ export default class ALXCourse {
     this._students = students;
   }
 
-  validateType(value, type, errorMsg) {
-    if (typeof value !== type) {
-      throw new TypeError(errorMsg);
-    }
-  }
-
-  validateStudents(students) {
-    if (
-      !Array.isArray(students) ||
-      !students.every((student) => typeof student === 'string')
-    ) {
-      throw new TypeError('students must be an array of strings');
-    }
-  }
 
   get name() {
     return this._name;
