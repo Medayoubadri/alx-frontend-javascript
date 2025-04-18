@@ -1,23 +1,23 @@
 /* eslint-disable no-underscore-dangle */
 
-export default class StudentALX {
-  constructor(firstName, lastName, alxClass) {
+export default class StudentHolberton {
+  constructor(firstName, lastName, holbertonClass) {
     this._firstName = firstName;
     this._lastName = lastName;
-    this._alxClass = alxClass;
+    this._holbertonClass = holbertonClass;
   }
 
   get fullName() {
     return `${this._firstName} ${this._lastName}`;
   }
 
-  get alxClass() {
-    return this._alxClass;
+  get holbertonClass() {
+    return this._holbertonClass;
   }
 
   get fullStudentDescription() {
     return `${this._firstName} ${this._lastName} - `
-      + `${this._alxClass.year} - `
-      + `${this._alxClass.location}`;
+      + `${this._holbertonClass.year} - `
+      + `${this._holbertonClass.location}`;
   }
 }

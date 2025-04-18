@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 
-export default class ALXClass {
+export default class HolbertonClass {
   constructor(year, location) {
     this._year = year;
     this._location = location;
