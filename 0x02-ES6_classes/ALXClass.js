@@ -1,7 +1,15 @@
 /* eslint-disable no-underscore-dangle */
 
-export default class HolbertonClass {
+export default class ALXClass {
   constructor(year, location) {
+    if (typeof year !== 'number') {
+      throw new TypeError('Year must be a number');
+    }
+
+    if (typeof location !== 'string') {
+      throw new TypeError('Location must be a string');
+    }
+
     this._year = year;
     this._location = location;
   }
